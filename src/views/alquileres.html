@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %>></title>
+  <%- include ('partials/head.html')%>
+</head>
+<body>
+  <%- include ('partials/navigation.html')%>
+
+  <div class="container p-5">
+    <div class="row">
+      <div class="col-sm-10 offset-md-1">
+        <div class="card animated flipInY">
+          <div class="card-header bg-dark text-white text-center">
+            <h3>Alquileres</h3>
+          </div>
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Monto</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Lugar</th>
+                  <th scope="col">Marca</th>
+                  <th scope="col">Modelo</th>
+                  <th scope="col">Año</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Descripcion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for(let i = 0; i < alquileres.length; i++) { %>
+
+                <tr>
+                  <th scope="row"><%= alquileres[i].nombre %></th>
+                  <td><%= alquileres[i].monto %></td>
+                  <td><%= alquileres[i].tipo %></td>
+                  <td><%= alquileres[i].telefono %></td>
+                  <td><%= alquileres[i].lugar %></td>
+                  <td><%= alquileres[i].marca %></td>
+                  <td><%= alquileres[i].modelo %></td>
+                  <td><%= alquileres[i].year %></td>
+                  <td><%= alquileres[i].estado %></td>
+                  <td><%= alquileres[i].descri %></td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- section one -->
+<div class="container-fluid" id="about">
+  <div class="row bg-dark text-white p-5 text-center">
+    <div class="col-sm-6">
+      <i class="fas fa-car fa-10x"></i>  
+    </div>
+    <div class="col-sm-6">
+      <h3>Alquileres de Autos </h3>
+      <p>
+        <span>En este espacio podras alquilar autos, ver y muchos mas.</span><br>
+        <span>Cansado de estar sin auto?</span><br>
+        <span>Que esperas ven y alquila uno ya!</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+  <%- include ('partials/footer.html')%>
+</body>
+</html>

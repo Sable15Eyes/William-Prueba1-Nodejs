@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include ('partials/head.html')%>
+
+</head>
+
+<body>
+
+  <!-- NAV CONTENT -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/"><%= title %></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/login"><i class="fas fa-redo"></i> Volver</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- MAIN CONTENT -->
+
+<div class="container p-5">
+  <div class="row">
+    <div class="col-sm-4 offset-md-4">
+      <div class="card animated flipInY">
+        <div class="card-header bg-dark text-white text-center">
+          <h3>Crear Usuario</h3>
+        </div>
+        <div class="form-group"><br>
+          <h5 style="text-align: center;"><i class="fas fa-user fa-4x"></i></h5>
+        </div>
+        <div class="card-body">
+          <form action="/crearUser" method="POST"> 
+            <div class="form-group">
+              <h5>Nombre:</h5>
+              <input class="form-control" name="nombre" type="text" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+              <h5>Edad:</h5>
+              <input class="form-control" name="edad"  type="text" placeholder="Edad">
+            </div>
+            <div class="form-group">
+              <h5>Genero:</h5>
+              <input class="form-control" name="genero" type="text" placeholder="Masculino">
+            </div>
+            <div class="form-group">
+              <h5>Pais:</h5>
+              <input class="form-control" name="pais" type="text" placeholder="Panama">
+            </div>
+            <div class="form-group">
+              <h5>Ciudad:</h5>
+              <input class="form-control" name="ciudad"  type="text" placeholder="Panama">
+            </div>
+            <div class="form-group">
+              <h5>Contraseña</h5>
+              <input class="form-control" name="pas"  type="password" placeholder="******">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary btn-block">
+                Enviar
+              </button>
+            </div>
+          </form>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section one -->
+<div class="container-fluid" id="about">
+  <div class="row bg-dark text-white p-5 text-center">
+    <div class="container">
+      <i class="fas fa-car fa-10x"></i>  
+    </div>
+  </div>
+</div>
+
+  <%- include ('partials/footer.html')%>
+
+ 
+</body>
+</html>

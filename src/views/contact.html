@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %>></title>
+  <%- include ('partials/head.html')%>
+</head>
+<body>
+  <%- include ('partials/navigation.html')%>
+
+  <div class="container p-5">
+    <div class="row">
+      <div class="col-sm-4 offset-md-4">
+        <div class="card animated flipInY">
+          <div class="card-header bg-dark text-white text-center">
+            <h3>Contactenos</h3>
+          </div>
+          <div class="card-body">
+            <form action="/insertarContacto" method="POST">
+              <div class="form-group">
+                <h5>Si tiene alguna pregunta contactenos con nosotros</h5>
+              </div>
+              <div class="form-group">
+                <h5>Su Correo:</h5>
+                <input class="form-control" name="correo" type="text" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <h5>Mensaje:</h5>
+                <textarea class="form-control" name="mensaje" cols="30" rows="15" placeholder="Mensaje"></textarea>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary btn-block">
+                  Enviar
+                </button>
+              </div>
+            </form>    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include ('partials/footer.html')%>
+</body>
+</html>

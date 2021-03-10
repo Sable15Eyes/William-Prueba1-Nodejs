@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %>></title>
+  <%- include ('partials/head.html')%>
+</head>
+<body>
+  <%- include ('partials/navigation.html')%>
+
+  <div class="container p-5">
+    <div class="row">
+      <div class="col-sm-7 offset-md-3">
+        <div class="card animated flipInY">
+          <div class="card-header bg-dark text-white text-center">
+            <h3>Autos Disponibles</h3>
+          </div>
+
+          <div class="card-header text-dark text-center">
+
+            <div class="card" style=" text-align: center;">
+              <img src="/img/car2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Hyundai</h5>
+                <p class="card-text"><strong>Marca:</strong>Hyundai</p>
+                <p class="card-text"><strong>Modelo:</strong>Sonata</p>
+                <p class="card-text"><strong>Año:</strong>2018</p>
+                <p class="card-text"><strong>Precio:</strong>24.450</p>
+                <p class="card-text"><strong>Tipo:</strong>Sedan</p>
+                <a href="#" class="btn btn-success">Conseguir</a>
+                <a href="#" class="btn btn-info">Mas Inforrmacion</a>
+              </div>
+            </div><br>
+
+            <div class="card" style=" text-align: center;">
+              <img src="/img/car1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Toyota</h5>
+                <p class="card-text"><strong>Marca:</strong>Toyota</p>
+                <p class="card-text"><strong>Modelo:</strong>Corrola</p>
+                <p class="card-text"><strong>Año:</strong>2019</p>
+                <p class="card-text"><strong>Precio:</strong>25.500</p>
+                <p class="card-text"><strong>Tipo:</strong>Sedan</p>                
+                <a href="#" class="btn btn-success">Conseguir</a>
+                <a href="#" class="btn btn-info">Mas Inforrmacion</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- section one -->
+<div class="container-fluid" id="about">
+  <div class="row bg-dark text-white p-5 text-center">
+    <div class="col-sm-6">
+      <i class="fas fa-car fa-10x"></i>  
+    </div>
+    <div class="col-sm-6">
+      <h3>Alquileres de Autos </h3>
+      <p>
+        <span>En este espacio podras alquilar autos, ver y muchos mas.</span><br>
+        <span>Cansado de estar sin auto?</span><br>
+        <span>Que esperas ven y alquila uno ya!</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+  <%- include ('partials/footer.html')%>
+</body>
+</html>

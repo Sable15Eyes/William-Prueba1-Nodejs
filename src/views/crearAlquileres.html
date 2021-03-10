@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %>></title>
+  <%- include ('partials/head.html')%>
+</head>
+<body>
+  <%- include ('partials/navigation.html')%>
+
+  <div class="container p-5">
+    <div class="row">
+      <div class="col-sm-5 offset-md-4">
+        <div class="card animated flipInY">
+          <div class="card-header bg-dark text-white text-center">
+            <h3>Crear Tu Alquiler</h3>
+          </div>
+          <div class="card-body">
+            <form action="/insertarNuevoAlquileres" method="POST">
+              <div class="form-group">
+                <h5>Nombre:</h5>
+                <input class="form-control" name="nombre" type="text" placeholder="Nombre">
+              </div>
+              <div class="form-group">
+                <h5>Monto:</h5>
+                <input class="form-control" name="monto" type="text" placeholder="500">
+              </div>
+              <div class="form-group">
+                <h5>Tipo:</h5>
+                <input class="form-control" name="tipo" type="text" placeholder="Sedan">
+              </div>
+              <div class="form-group">
+                <h5>Telefono:</h5>
+                <input class="form-control" name="telefono" type="text" placeholder="123-456-78">
+              </div>
+              <div class="form-group">
+                <h5>Lugar:</h5>
+                <input class="form-control" name="lugar" type="text" placeholder="Panama">
+              </div>
+              <div class="form-group">
+                <h5>Marca:</h5>
+                <input class="form-control" name="marca" type="text" placeholder="Toyota">
+              </div>
+              <div class="form-group">
+                <h5>Modelo:</h5>
+                <input class="form-control" name="modelo" type="text" placeholder="Corrola">
+              </div>
+              <div class="form-group">
+                <h5>Año:</h5>
+                <input class="form-control" name="year" type="text" placeholder="2021">
+              </div>
+              <div class="form-group">
+                <h5>Descripcion:</h5>
+                <textarea name="descripcion" cols="49" rows="6"></textarea>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary btn-block">Crear Alquiler</button>
+              </div>
+            </form>    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- section one -->
+<div class="container-fluid" id="about">
+  <div class="row bg-dark text-white p-5 text-center">
+    <div class="col-sm-6">
+      <i class="fas fa-car fa-10x"></i>  
+    </div>
+    <div class="col-sm-6">
+      <h3>Alquileres de Autos </h3>
+      <p>
+        <span>En este espacio podras alquilar autos, ver y muchos mas.</span><br>
+        <span>Cansado de estar sin auto?</span><br>
+        <span>Que esperas ven y alquila uno ya!</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+  <%- include ('partials/footer.html')%>
+</body>
+</html>
